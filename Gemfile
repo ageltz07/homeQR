@@ -41,8 +41,10 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 gem "devise"
 
+# https://github.com/whomwah/rqrcode
 gem "rqrcode"
 
+# https://github.com/wvanbergen/chunky_png
 gem "chunky_png"
 
 group :development, :test do
