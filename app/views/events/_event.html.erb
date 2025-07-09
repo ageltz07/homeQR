@@ -14,4 +14,8 @@
     <%= event.location %>
   </p>
 
+  <% if @event.qr_image.attached? %>
+    <%= image_tag @event.qr_image %>
+  <% end %>
+
 </div>
