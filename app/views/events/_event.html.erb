@@ -14,8 +14,14 @@
     <%= event.location %>
   </p>
 
-  <% if @event.qr_image.attached? %>
-    <%= image_tag @event.qr_image %>
+  <ul>
+    <% event.items.each do |item| %>
+      <p> <%= item.name %>, Status: <%= item.status %> </p>
+    <% end %>
+  </ul>
+
+  <% if event.qr_image.attached? %>
+    <%= image_tag event.qr_image %>
   <% end %>
 
 </div>

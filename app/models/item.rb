@@ -1,10 +1,17 @@
 class Item < ApplicationRecord
   belongs_to :event
-  enum status: {
+  enum :status, {
     full: "full",
     low: "low",
-    none: "none"
-  }, _default: "full"
+    out: "out"
+  }
 
-  validates :name, presence: true
+  enum :category, {
+    food: "food",
+    drink_A: "Alcohol",
+    drink_N: "Non-Alcohol",
+    dessert: "dessert"
+  }
+
+  validates :name, :status, :category, presence: true
 end

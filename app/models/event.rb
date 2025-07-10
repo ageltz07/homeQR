@@ -2,7 +2,7 @@ class Event < ApplicationRecord
   has_many :items
   has_one_attached :qr_image
 
-  after_commit :create_qr_code, on: [:create, :update], unless: :updating_qr_code_only?
+  after_commit :create_qr_code, on: [ :create ]
 
   private
 
@@ -19,10 +19,9 @@ class Event < ApplicationRecord
     )
   end
 
-  def updating_qr_code_only?
-    # This is to avoid an infinite loop of callbacks when generating the qr code using an after_commit
-    # callback.
+  # TODO: Create a need_to_update_qr_code? method in rare case that it may need
+  # regenerated.
 
-    qr_image.attached? && previous_changes.keys == []
-  end
+  # TODO: Create a cleanup callback for after deleting an event to destroy directories
+  # left behind after deleting qr_image on local disk storage.
 end
