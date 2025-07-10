@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Currently writing this app so that I and eventually other users can create printable 
+QR codes that link to a list of  items available at their events. 
+Example being what food/drinks are available at your cookout this weekend
 
-Things you may want to cover:
+I had this idea after having a July 4th cookout at my house and found it would
+be much easier to have a few QR codes sprinkled around inside and outside with
+what drinks are available. Much better than me telling each of my guests a list of drinks
+in the coolers/fridge or what all will be made on the grill.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Features to be added
+- User Sign Up
+- Creation of Events and attaching items (Food/Drinks) and images for each item
+- Ability to update the list to show which items are still available
+- More to come...
